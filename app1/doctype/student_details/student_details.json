@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "id-.####",
+ "creation": "2026-07-16 18:03:51.808431",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "students_section",
+  "name1",
+  "studentimage",
+  "signature",
+  "refereddoc",
+  "email",
+  "confirmemail",
+  "password",
+  "status",
+  "route",
+  "published",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "students_section",
+   "fieldtype": "Section Break",
+   "label": "Students"
+  },
+  {
+   "bold": 1,
+   "fetch_if_empty": 1,
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "length": 100,
+   "not_nullable": 1,
+   "options": "Name",
+   "placeholder": "name",
+   "reqd": 1,
+   "show_description_on_click": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "studentimage",
+   "fieldtype": "Attach Image",
+   "label": "Student Image",
+   "placeholder": "Picture",
+   "show_description_on_click": 1
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Dynamic Link",
+   "label": "Signature",
+   "mask": 1,
+   "options": "refereddoc"
+  },
+  {
+   "fieldname": "refereddoc",
+   "fieldtype": "Link",
+   "label": "Refered Doctype",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Dynamic Link",
+   "in_preview": 1,
+   "label": "Email",
+   "options": "confirmemail"
+  },
+  {
+   "fetch_from": "refereddoc.description",
+   "fieldname": "confirmemail",
+   "fieldtype": "Link",
+   "label": "Confirm Email",
+   "options": "DocType",
+   "print_hide": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "mask": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Completed\nIncomplete\nPending"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "published?"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  }
+ ],
+ "grid_page_length": 50,
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
+ "links": [
+  {
+   "group": "Group name",
+   "link_doctype": "Personal Details",
+   "link_fieldname": "name1"
+  },
+  {
+   "group": "Group name",
+   "link_doctype": "ParentClass",
+   "link_fieldname": "regno"
+  }
+ ],
+ "modified": "2026-07-22 12:52:27.111134",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Student Details",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sanusha",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "route",
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Completed"
+  },
+  {
+   "color": "Cyan",
+   "title": "Incomplete"
+  },
+  {
+   "color": "Pink",
+   "title": "Pending"
+  }
+ ],
+ "title_field": "name1",
+ "website_search_field": "title"
+}

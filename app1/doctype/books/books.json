@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_bulk_edit": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2026-07-23 14:59:08.483934",
+ "default_view": "Kanban",
+ "description": "this is book doctype",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_x6ou",
+  "amended_from",
+  "book_name",
+  "author",
+  "price",
+  "description",
+  "published",
+  "title",
+  "route",
+  "image_reoo",
+  "button_dbye",
+  "image1"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_x6ou",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "books",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "book_name",
+   "fieldtype": "Data",
+   "in_preview": 1,
+   "label": "Book Name",
+   "not_nullable": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "label": "Price",
+   "print_width": "12px"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "image_reoo",
+   "fieldtype": "Image"
+  },
+  {
+   "fieldname": "button_dbye",
+   "fieldtype": "Button",
+   "label": "button"
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image",
+   "label": "image1"
+  }
+ ],
+ "grid_page_length": 50,
+ "has_web_view": 1,
+ "image_field": "image1",
+ "is_published_field": "published",
+ "is_submittable": 1,
+ "links": [],
+ "max_attachments": 5,
+ "modified": "2026-07-29 13:05:18.565114",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "books",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "route": "route",
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_preview_popup": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "website_search_field": "title"
+}

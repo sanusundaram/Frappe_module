@@ -1,0 +1,23 @@
+{
+ "allow_roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2026-07-22 18:33:19.329129",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-07-22 18:33:19.329129",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Status",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "min 5 days leavs"
+  }
+ ],
+ "title": "Leave Status"
+}
