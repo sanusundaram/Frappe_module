@@ -8,7 +8,12 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_4g7t",
-  "name1"
+  "name1",
+  "reg_no",
+  "address",
+  "mobile_no",
+  "disease",
+  "status"
  ],
  "fields": [
   {
@@ -19,12 +24,38 @@
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "name"
+  },
+  {
+   "fieldname": "reg_no",
+   "fieldtype": "Data",
+   "label": "reg no"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "address"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "mobile no"
+  },
+  {
+   "fieldname": "disease",
+   "fieldtype": "Data",
+   "label": "disease"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "status",
+   "options": "Pending\nApproved\nCancelled"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-29 15:15:36.002995",
+ "modified": "2026-08-03 13:02:03.203276",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "dummy",
