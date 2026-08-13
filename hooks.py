@@ -11,16 +11,16 @@ doc_events={
     }
 }
 
-# scheduler_events = {
-#     "cron": {
-#         "*/1 * * * *": [
-#             "app1.task.daily_maintenance"
-#         ],
-#         "* * * * *": [
-#             "app1.task.msgprint"
-#         ]
-#     }
-# }
+scheduler_events = {
+    "cron": {
+        "*/1 * * * *": [
+            "app1.task.daily_maintenance"
+        ],
+        "* * * * *": [
+            "app1.task.msgprint"
+        ]
+    }
+}
 #after_build="app1.custom.after_build"
 #before_tests="app1.custom.before_tests"
 
