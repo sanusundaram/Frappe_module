@@ -15,6 +15,8 @@ class TestDocument(Document):
 		from frappe.types import DF
 
 		description: DF.Data | None
+		progress: DF.Percent
+		progress_status: DF.Literal["Pending", "Processing", "Completed"]
 	# end: auto-generated types
 
 	def before_save(self):

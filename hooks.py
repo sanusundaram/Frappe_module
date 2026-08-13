@@ -4,12 +4,139 @@ app_publisher = "sanusha"
 app_description = "sample first app"
 app_email = "sanusundaram98@gmail.com"
 app_license = "mit"
-app_include_js="custome_desk.bundle.js"
+#app_include_js="custome_desk.bundle.js"
 doc_events={
     "test_document":{
         "validate":"app1.api.custom_print"
     }
 }
+
+scheduler_events = {
+    "cron": {
+        "*/1 * * * *": [
+            "app1.task.daily_maintenance"
+        ],
+        "* * * * *": [
+            "app1.task.msgprint"
+        ]
+    }
+}
+#after_build="app1.custom.after_build"
+#before_tests="app1.custom.before_tests"
+
+#before_write_file="app1.file.before_write"
+
+# write_file = "app1.file.write_file"
+
+#delete_file_data_content = "app1.file.delete_file"
+
+
+
+
+#get_sender_details="app1.custom.get_sender_details"
+
+#override_email_send = "app1.custom.send"
+
+#extend_bootinfo="app1.custom.boot_session"
+
+# from datetime import date
+# import frappe 
+#website_context = {
+#     "today": date.today(),
+#     "college": "BIT",
+#     "department": "AI & DS",
+#     "students": frappe.get_all(
+#         "dummy",
+#         flides=["name1"]
+#     )
+
+#}
+# import frappe
+# from datetime import date
+
+# website_context = {
+#     "today": date.today(),
+#     "college": "BIT",
+#     # "students": frappe.get_all(
+#     #     "Employee",
+#     #     fields=["employee_name"]
+#     # )
+#     # # "students": [
+#     #     {"employee_name": "A"},
+#     #     {"employee_name": "B"},
+#     #     {"employee_name": "C"},
+#     # ]
+# }
+
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "app1.pages.context_404",
+#     "frappe.www.about": "app1.pages.context_about"
+
+# }
+
+
+# website_route_rules = [
+#     {
+#         "from_route": "/employee/<employee>",
+#         "to_route": "employee"
+#     }
+# ]
+#not work
+
+
+
+#website_path_resolver = "app1.file.resolve_path"
+#not work
+
+
+
+
+# hooks.py
+
+#get_web_pages_with_dynamic_routes = "app1.script.get_web_pages_with_dynamic_routes"
+#not work
+
+#desk
+
+#app_include_js="app.bundle.js"
+#app_include_css = "/assets/app1/css/app.css"
+
+
+#portal
+
+
+#web_include_css="/assets/app1/css/website.css"
+
+
+#webform
+
+# webform_include_js={
+#     "Leave Application":"/assets/app1/css/custom.js"
+# }
+
+# webform_include_css={
+#     "Leave Application":"/assets/app1/css/app.css"
+# }
+
+
+#pages
+
+# page_js = {
+#     "background_jobs": "public/js/custom_background_jobs.js"
+# }
+
+
+#website 404
+
+
+#website_catch_all = "not_found" not work
+
+
+#base hook
+# base_template = "app1/templates/base.html"
+
+
+
 # Apps
 # ------------------
 

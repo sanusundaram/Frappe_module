@@ -20,7 +20,8 @@
   "gender",
   "skill",
   "is_active",
-  "depart"
+  "depart",
+  "details"
  ],
  "fields": [
   {
@@ -99,6 +100,11 @@
    "fieldtype": "Link",
    "label": "Depart",
    "options": "Department"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "JSON",
+   "label": "Details"
   }
  ],
  "grid_page_length": 50,
@@ -111,7 +117,7 @@
   }
  ],
  "make_attachments_public": 1,
- "modified": "2026-07-27 11:49:21.882912",
+ "modified": "2026-08-12 12:39:37.724985",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Employee",

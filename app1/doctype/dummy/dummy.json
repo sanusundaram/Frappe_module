@@ -13,7 +13,8 @@
   "address",
   "mobile_no",
   "disease",
-  "status"
+  "status",
+  "img"
  ],
  "fields": [
   {
@@ -50,12 +51,17 @@
    "fieldtype": "Select",
    "label": "status",
    "options": "Pending\nApproved\nCancelled"
+  },
+  {
+   "fieldname": "img",
+   "fieldtype": "Attach",
+   "label": "img"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-03 13:02:03.203276",
+ "modified": "2026-08-04 14:25:35.181354",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "dummy",

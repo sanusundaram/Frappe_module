@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../apps/app1/app1/public/js/custom.js"],
+  "sourcesContent": ["console.log(\"Custom JS Loaded!\");\r\n\r\nfrappe.ready(function () {\r\n    alert(\"Welcome to Frappe!\");\r\n});"],
+  "mappings": ";;AAAA,UAAQ,IAAI,mBAAmB;AAE/B,SAAO,MAAM,WAAY;AACrB,UAAM,oBAAoB;AAAA,EAC9B,CAAC;",
+  "names": []
+}

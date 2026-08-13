@@ -6,19 +6,32 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "description"
+  "description",
+  "progress",
+  "progress_status"
  ],
  "fields": [
   {
    "fieldname": "description",
    "fieldtype": "Data",
    "label": "Description"
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "label": "progress"
+  },
+  {
+   "fieldname": "progress_status",
+   "fieldtype": "Select",
+   "label": "progress_status",
+   "options": "Pending\nProcessing\nCompleted"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-31 14:31:41.116937",
+ "modified": "2026-08-13 14:38:28.150587",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Test Document",

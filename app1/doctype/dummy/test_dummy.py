@@ -1,7 +1,7 @@
 # Copyright (c) 2026, sanusha and Contributors
 # See license.txt
 
-# import frappe
+import frappe
 from frappe.tests import IntegrationTestCase
 
 
@@ -18,5 +18,22 @@ class IntegrationTestdummy(IntegrationTestCase):
 	Integration tests for dummy.
 	Use this class for testing interactions between multiple components.
 	"""
+	print("testing")
 
-	pass
+
+
+from frappe.tests import UnitTestCase
+class TestDummy(UnitTestCase):
+
+	def test_dummy(self):
+		print("Dummy Test")
+
+		doc = frappe.db.get_value(
+			"dummy",
+			{"reg_no": "215478"},
+			["name1"],
+			as_dict=True
+		)
+
+		if doc.name1 == "ABC":
+			print("Pass")
