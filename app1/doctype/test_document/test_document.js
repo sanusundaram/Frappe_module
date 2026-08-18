@@ -6,3 +6,9 @@
 
 // 	},
 // });
+frappe.ui.form.on('Test Document',{
+    onload: function(frm){
+        const tour_name='form tour';
+        frm.tour.init({tour_name}).then(()=> frm.tour.start());
+    }
+});

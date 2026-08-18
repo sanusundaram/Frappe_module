@@ -5,21 +5,19 @@
 from frappe.model.document import Document
 
 
-class Links(Document):
+class Members(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from app1.app1.doctype.links.links import Links
 		from frappe.types import DF
 
-		dept: DF.Literal["AIDS", "AIML", "CSE", "CSD", "ISE", "IT", "MECH", "ECE", "EEE", "EIE"]
-		mobile_number: DF.Phone | None
-		parent: DF.Data
-		parentfield: DF.Data
-		parenttype: DF.Data
-		skills: DF.Data | None
+		category: DF.Data | None
+		details: DF.Table[Links]
+		member_name: DF.Data | None
 	# end: auto-generated types
 
 	pass
