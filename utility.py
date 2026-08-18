@@ -23,3 +23,4 @@ def getter():
         "timestamp": frappe.utils.now(),
         "records": employees
     }
+    # this is utility function assignment
