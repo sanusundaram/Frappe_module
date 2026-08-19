@@ -21,3 +21,13 @@ class Members(Document):
 	# end: auto-generated types
 
 	pass
+	
+import frappe
+@frappe.whitelist()
+def set_record():
+    doc=frappe.new_doc("Members")
+    
+    doc.member_name="leader"
+    doc.category="employee"
+    doc.save()
+    return doc.name;

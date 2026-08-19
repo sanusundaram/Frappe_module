@@ -13,9 +13,9 @@ IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
 
-class IntegrationTesttree(IntegrationTestCase):
+class IntegrationTesttrees(IntegrationTestCase):
 	"""
-	Integration tests for tree.
+	Integration tests for trees.
 	Use this class for testing interactions between multiple components.
 	"""
 

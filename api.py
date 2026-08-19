@@ -7,7 +7,18 @@
 
 #     leaveapp=frappe.qb.DocType("Leave Application")
 #     employee=frappe.qb.DocType("Employee")
+import frappe
+import random
 
+
+@frappe.whitelist()
+def generate_random_value():
+
+    value = random.randint(1, 100)
+
+    print("Generated value:", value)
+
+    return value
 
 #     query=(frappe.qb.from_(leaveapp).
 #     inner_join(employee).

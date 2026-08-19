@@ -40,9 +40,9 @@ frappe.listview_settings["Members"] = {
         ['category', '=', 'Student']
     ],//wont work
 
-    get_form_link(doc) {
-        return `app/members/${doc.name}`;
-    },//by default epdi work aagumo,same thing happening
+    // get_form_link(doc) {
+    //     return `app/members/${doc.name}`;
+    // },//by default epdi work aagumo,same thing happening
     button: {
 
         show(doc) {

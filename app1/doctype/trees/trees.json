@@ -2,21 +2,21 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2026-07-23 12:19:08.469833",
+ "creation": "2026-08-18 13:43:25.379826",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_jj6b",
+  "section_break_edcp",
   "lft",
   "rgt",
   "is_group",
   "old_parent",
-  "parent_tree"
+  "parent_trees",
+  "name1"
  ],
  "fields": [
   {
-   "fieldname": "section_break_jj6b",
+   "fieldname": "section_break_edcp",
    "fieldtype": "Section Break"
   },
   {
@@ -46,26 +46,30 @@
    "fieldtype": "Link",
    "hidden": 1,
    "label": "Old Parent",
-   "options": "tree"
+   "options": "trees"
   },
   {
-   "fieldname": "parent_tree",
+   "fieldname": "parent_trees",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
-   "label": "Parent tree",
-   "options": "tree"
+   "label": "Parent trees",
+   "options": "trees"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "name"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2026-07-23 14:56:39.795584",
+ "modified": "2026-08-18 13:51:32.877965",
  "modified_by": "Administrator",
  "module": "App1",
- "name": "tree",
- "naming_rule": "Set by user",
- "nsm_parent_field": "parent_tree",
+ "name": "trees",
+ "nsm_parent_field": "parent_trees",
  "owner": "Administrator",
  "permissions": [
   {
@@ -85,5 +89,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "name1"
 }

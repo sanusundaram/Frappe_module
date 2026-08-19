@@ -131,3 +131,128 @@
 // });
 
 
+   // =====================================================
+    // dialog in js
+    // =====================================================
+// frappe.ui.form.on("Members", {
+
+//     refresh(frm) {
+
+//         frm.add_custom_button("dialog", () => {
+
+//             let dialog = new frappe.ui.Dialog({
+
+//                 title: "Add Member",
+
+//                 fields: [
+//                     {
+//                         fieldname: "member_name",
+//                         fieldtype: "Data",
+//                         label: "Member Name",
+//                         reqd: 1
+//                     },
+//                     {
+//                         fieldname: "category",
+//                         fieldtype: "Select",
+//                         label: "Category",
+//                         options: "\nStudent\nEmployee",
+//                         reqd: 1
+//                     }
+//                 ],
+
+//                 primary_action_label: "Save",
+
+//                 primary_action(values) {
+
+//                     console.log("Values:", values);
+
+//                     frappe.msgprint({
+//                         title: "Member Details",
+//                         message: `
+//                             Member: ${values.member_name}<br>
+//                             Category: ${values.category}
+//                         `,
+//                         indicator: "green"
+//                     });
+
+//                     dialog.hide();
+//                 }
+
+//             });
+
+//             dialog.show();
+
+//         });
+//         frm.add_custom_button("prompt", () => {
+//             frappe.prompt(
+//             {
+//                 fieldname: "member_name",
+//                 fieldtype: "Data",
+//                 label: "Member Name",
+//                 reqd: 1
+//             },
+//             function(values) {
+
+//                 console.log(values);
+
+//             },
+//             "Add Member",
+//             "Save"
+//             );
+//         });
+
+//     }
+
+// });
+
+
+//---------------
+// CHart api
+//---------------
+
+const dia = new frappe.ui.Dialog({
+
+    title: "Adding Members",
+
+    fields: [
+        {
+            label: "Member Name",
+            fieldtype: "Data",
+            fieldname: "member_name",
+            reqd: 1
+        }
+    ],
+
+    primary_action_label: "Submit",
+
+    primary_action(value) {
+
+        frappe.call({
+
+            method: "app1.getter.set_record",
+
+            args: {
+                member_name: value.member_name
+            },
+
+            callback: function(r) {
+
+                console.log("Response:", r.message);
+
+                dia.hide();
+
+                frappe.msgprint({
+                    title: "Success",
+                    message: "Member created successfully",
+                    indicator: "green"
+                });
+                frappe.set_route("Form","Members",r.message);
+            }
+
+        });
+
+    }
+
+});
+
+dia.show();
