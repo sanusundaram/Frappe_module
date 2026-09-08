@@ -21,6 +21,13 @@ scheduler_events = {
         ]
     }
 }
+
+fixtures = ["Client Script"]
+
+
+
+
+
 #after_build="app1.custom.after_build"
 #before_tests="app1.custom.before_tests"
 

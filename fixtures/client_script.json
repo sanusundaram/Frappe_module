@@ -1,0 +1,57 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "books",
+  "enabled": 1,
+  "modified": "2026-07-23 16:59:20.927466",
+  "module": null,
+  "name": "cs1",
+  "script": "frappe.ui.form.on('books', {\n\tbutton_dbye(frm) {\n\t\tfrappe.set_route(\"List\", \"Department\");\n\t}\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "dummy",
+  "enabled": 0,
+  "modified": "2026-08-10 15:47:35.866836",
+  "module": "App1",
+  "name": "dummy doc",
+  "script": "frappe.realtime.on(\"dummylist\",(data)=>{\n    frappe.call({\n        method:\"app1.app1.doctype.dummy.dummy.create_book\",\n        args:{\n            doc:{\n                doctype:\"dummy\",\n                title:data.name1\n            }\n        }\n    });\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "dummy",
+  "enabled": 1,
+  "modified": "2026-08-10 16:12:22.402704",
+  "module": "App1",
+  "name": "dummy",
+  "script": "frappe.realtime.on(\"dummylist\",(data)=>{\r\n    console.log(data)\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Test Document",
+  "enabled": 1,
+  "modified": "2026-08-13 14:40:43.785654",
+  "module": "App1",
+  "name": "progress",
+  "script": "frappe.ui.form.on(\"Employee\", {\r\n\r\n    refresh: function(frm) {\r\n\r\n        frm.add_custom_button(\"Start Processing\", function() {\r\n\r\n            frappe.call({\r\n                method: \"app1.api.process_employee\",\r\n\r\n                args: {\r\n                    employee: frm.doc.name\r\n                },\r\n\r\n                callback: function(r) {\r\n\r\n                    frappe.msgprint(\r\n                        \"Processing completed!\"\r\n                    );\r\n\r\n                    frm.reload_doc();\r\n\r\n                }\r\n            });\r\n\r\n        });\r\n\r\n    }\r\n\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 0,
+  "modified": "2026-09-08 18:43:08.432970",
+  "module": "App1",
+  "name": "guide-1",
+  "script": "frappe.ui.form.on('User', {\n\trefresh(frm) {\n\t    frm.add_custom_button(\n            \"Send Welcome Email\",\n            function() {\n                frappe.msgprint(\"Email Sent!\");\n            },\n            \"Actions\"\n        );\n\t}\n})",
+  "view": "Form"
+ }
+]
