@@ -24,16 +24,21 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "name"
+   "in_list_view": 1,
+   "label": "name",
+   "reqd": 1
   },
   {
    "fieldname": "reg_no",
    "fieldtype": "Data",
-   "label": "reg no"
+   "label": "reg no",
+   "mask": 1,
+   "not_nullable": 1
   },
   {
    "fieldname": "address",
    "fieldtype": "Small Text",
+   "is_virtual": 1,
    "label": "address"
   },
   {
@@ -61,7 +66,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-04 14:25:35.181354",
+ "modified": "2026-09-05 14:39:38.716480",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "dummy",

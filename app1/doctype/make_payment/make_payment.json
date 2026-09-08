@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-25 11:31:01.937296",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "cart",
+  "customer_id",
+  "customer_name",
+  "mobile_no",
+  "total_amount",
+  "mode_of_pay",
+  "balance_amount",
+  "enter_amount_to_be_pay"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Customer Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mode_of_pay",
+   "fieldtype": "Select",
+   "label": "Mode of pay",
+   "options": "Credit Card\nUPI\nCash"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Int",
+   "label": "Balance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "enter_amount_to_be_pay",
+   "fieldtype": "Int",
+   "label": "Enter amount to be pay"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cart",
+   "fieldtype": "Link",
+   "label": "cart",
+   "options": "Cart"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Int",
+   "label": "Total Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-25 16:15:13.928794",
+ "modified_by": "Administrator",
+ "module": "App1",
+ "name": "Make Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cart"
+}

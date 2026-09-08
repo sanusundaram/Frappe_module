@@ -14,12 +14,11 @@ class dummy(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		address: DF.SmallText | None
 		disease: DF.Data | None
 		img: DF.Attach | None
 		mobile_no: DF.Data | None
-		name1: DF.Data | None
-		reg_no: DF.Data | None
+		name1: DF.Data
+		reg_no: DF.Data
 		status: DF.Literal["Pending", "Approved", "Cancelled"]
 	# end: auto-generated types
 
