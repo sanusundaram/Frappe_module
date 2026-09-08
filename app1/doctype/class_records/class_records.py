@@ -14,8 +14,9 @@ class ClassRecords(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+		marks: DF.Int
 		name1: DF.Data | None
-		roll_no: DF.Link | None
+		roll_no: DF.Data | None
 	# end: auto-generated types
 
 	pass

@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "name1",
-  "roll_no"
+  "roll_no",
+  "marks"
  ],
  "fields": [
   {
@@ -18,15 +19,20 @@
   {
    "fetch_if_empty": 1,
    "fieldname": "roll_no",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "roll no",
    "options": "Department"
+  },
+  {
+   "fieldname": "marks",
+   "fieldtype": "Int",
+   "label": "Marks"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-09-05 15:19:14.381280",
+ "modified": "2026-09-08 12:49:01.955147",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Class Records",

@@ -40,47 +40,47 @@ def get_columns() -> list[dict]:
 	One field definition per column, just like a DocType field definition.
 	"""
 	return [
-		{
-			"label": _("Customer Name"),
-			"fieldname": "customer_id",
-			"fieldtype": "Data",
-		},
-		{
-			"label": _("Phone No"),
-			"fieldname": "product_name",
-			"fieldtype": "Table",
-			"options":"Items"
-		},
-		{
-			"label": _("name"),
-			"fieldname": "name",
-			"fieldtype": "Data"
-		},
-		{
-			"label": _("Name"),
-			"fieldname": "parent",
-			"fieldtype": "Data"
-		},
-		{
-			"label": _("Name"),
-			"fieldname": "stock",
-			"fieldtype": "Int"
-		}
-	]
-
-
-def get_data() -> list[list]:
-	"""Return data for the report.
-
-	The report data is a list of rows, with each row being a list of cell values.
-	"""
-	data=frappe.db.sql("""
-		select c.customer_id,i.product_name,i.name,i.parent,p.stock
-		from `tabCart` c
-		join `tabItems` i 
-		on i.parent=c.name
-		join `tabProduct` p
-		on p.name=i.product_name
+			{
+				"label": _("Name"),
+				"fieldname": "name1",
+				"fieldtype": "Data",
+			},
+			{
+				"label": _("Roll No"),
+				"fieldname": "roll_no",
+				"fieldtype": "Data",
+			},
+			{
+				"label": _("Marks"),
+				"fieldname": "marks",
+				"fieldtype": "Data",
+			},
+		]
 		
-	""")
-	return data
+def get_data(filters=None) -> list[list]:
+    """Return data for the report."""
+
+    query = """
+        SELECT
+            name1,
+            roll_no,
+            marks
+        FROM `tabClass Records`
+    """
+
+    values = {}
+
+    if filters and filters.get("roll_no"):
+        query += """
+            WHERE roll_no = %(roll_no)s
+        """
+
+        values["roll_no"] = filters.get("roll_no")
+
+    return frappe.db.sql(
+        query,
+        values,
+        as_list=True
+    )
+
+

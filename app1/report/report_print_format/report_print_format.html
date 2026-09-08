@@ -1,0 +1,28 @@
+<h2 class="text-center">
+    Report Print Format
+</h2>
+
+<p>
+    <strong>Roll No Filter:</strong>
+    {%= filters.roll_no || "All" %}
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for (var i = 0, l = data.length; i < l; i++) { %}
+            <tr>
+                <td>{%= data[i].name1 %}</td>
+                <td>{%= data[i].roll_no %}</td>
+                <td>{%= data[i].marks %}</td>
+            </tr>
+        {% } %}
+    </tbody>
+</table>
