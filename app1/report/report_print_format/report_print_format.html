@@ -1,4 +1,4 @@
-<h2 class="text-center">
+<!-- <h2 class="text-center">
     Report Print Format
 </h2>
 
@@ -25,4 +25,40 @@
             </tr>
         {% } %}
     </tbody>
+</table> -->
+
+
+<h2 class="text-center">
+    Class Records Report
+</h2>
+
+<p>
+    <strong>Marks Above:</strong>
+    {%= filters.marks || "All" %}
+</p>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for (var i = 0, l = data.length; i < l; i++) { %}
+
+        <tr>
+            <td>{%= data[i].name1 %}</td>
+            <td>{%= data[i].roll_no %}</td>
+            <td>{%= data[i].marks %}</td>
+        </tr>
+
+        {% } %}
+
+    </tbody>
+
 </table>
