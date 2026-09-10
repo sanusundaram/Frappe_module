@@ -13,7 +13,7 @@
  "allow_rename": 1,
  "autoname": "idty-.####",
  "creation": "2026-07-22 15:21:15.200276",
- "default_view": "Kanban",
+ "default_view": "List",
  "doctype": "DocType",
  "documentation": "http://127.0.0.1:8001/google-form/new",
  "engine": "InnoDB",
@@ -65,7 +65,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-24 19:11:10.350974",
+ "modified": "2026-09-09 16:21:03.963231",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Department",
@@ -90,6 +90,5 @@
  "search_fields": "department_name",
  "sort_field": "creation",
  "sort_order": "ASC",
- "states": [],
- "track_seen": 1
+ "states": []
 }

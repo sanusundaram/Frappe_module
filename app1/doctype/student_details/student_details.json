@@ -1,5 +1,12 @@
 {
- "actions": [],
+ "actions": [
+  {
+   "action": "personal-details",
+   "action_type": "Route",
+   "group": "parent",
+   "label": "NAME"
+  }
+ ],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
  "autoname": "id-.####",
@@ -124,7 +131,7 @@
    "link_fieldname": "regno"
   }
  ],
- "modified": "2026-08-13 10:42:33.555317",
+ "modified": "2026-09-09 14:46:10.591506",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Student Details",

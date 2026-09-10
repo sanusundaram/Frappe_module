@@ -33,13 +33,14 @@
    "fieldname": "phone_no",
    "fieldtype": "Data",
    "label": "Phone No",
-   "options": "Phone"
+   "options": "Phone",
+   "print_width": "10"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-24 18:56:29.255653",
+ "modified": "2026-09-09 12:24:59.262455",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Customer",

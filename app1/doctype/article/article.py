@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class PersonalDetails(Document):
+class article(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,8 +14,19 @@ class PersonalDetails(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		amended_from: DF.Link | None
-		name1: DF.Data | None
+		article_name: DF.Data | None
+		status: DF.Literal["Draft", "Published", "Outdated"]
 	# end: auto-generated types
 
 	pass
+
+
+import frappe
+
+
+def get_context(context):
+    context.articles = frappe.get_all(
+        "article",
+        filters={"status": "Published"},
+        fields=["article_name", "name"]
+    )

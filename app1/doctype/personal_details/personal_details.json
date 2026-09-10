@@ -43,7 +43,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-17 12:36:13.173869",
+ "modified": "2026-09-09 14:22:37.700679",
  "modified_by": "Administrator",
  "module": "App1",
  "name": "Personal Details",
@@ -60,7 +60,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
@@ -68,5 +67,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
