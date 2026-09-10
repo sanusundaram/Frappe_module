@@ -8,17 +8,28 @@
 #     leaveapp=frappe.qb.DocType("Leave Application")
 #     employee=frappe.qb.DocType("Employee")
 import frappe
-import random
+# import random
 
 
-@frappe.whitelist()
-def generate_random_value():
+# @frappe.whitelist()
+# def generate_random_value():
 
-    value = random.randint(1, 100)
+#     value = random.randint(1, 100)
 
-    print("Generated value:", value)
+#     print("Generated value:", value)
 
-    return value
+#     return value
+
+
+@frappe.whitelist(allow_guest=True)
+@frappe.rate_limiter.rate_limit(limit=5)
+def limited_greeting():
+    logger = frappe.logger()
+    logger.info("Endpoint called.")
+
+    frappe.response["message"] = "Hello, Rate Limited World!"
+
+
 
 #     query=(frappe.qb.from_(leaveapp).
 #     inner_join(employee).
@@ -103,24 +114,24 @@ def generate_random_value():
 
 
 
-import frappe
-import time
+# import frappe
+# import time
 
 
-@frappe.whitelist()
-def test_progress():
+# @frappe.whitelist()
+# def test_progress():
 
-    for i in range(0, 101, 10):
+#     for i in range(0, 101, 10):
 
-        frappe.publish_progress(
-            i,
-            title="Employee Processing",
-            description=f"Processing... {i}% completed"
-        )
+#         frappe.publish_progress(
+#             i,
+#             title="Employee Processing",
+#             description=f"Processing... {i}% completed"
+#         )
 
-        time.sleep(1)
+#         time.sleep(1)
 
-    return {
-        "success": True,
-        "message": "Employee processing completed"
-    }
+#     return {
+#         "success": True,
+#         "message": "Employee processing completed"
+#     }
